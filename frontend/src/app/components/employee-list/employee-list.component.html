@@ -18,13 +18,13 @@
     </thead>
     <tbody>
       <tr *ngFor="let employee of Employee; let i = index">
-        <th scope="row">{{ employee._id }}</th>
+        <th scope="row">{{ employee.id }}</th>
         <td>{{ employee.name }}</td>
         <td>{{ employee.email }}</td>
         <td>{{ employee.designation }}</td>
         <td>{{ employee.phoneNumber }}</td>
         <td class="text-center edit-block">
-          <span class="edit" [routerLink]="['/edit-employee/', employee._id]">
+          <span class="edit" [routerLink]="['/edit-employee/', employee.id]">
             <button type="button" class="btn btn-success btn-sm">Edit</button>
           </span>
           <span class="delete" (click)="removeEmployee(employee, i)">
